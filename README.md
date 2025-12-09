@@ -1,4 +1,4 @@
-# Contact Manager – Full-Stack CRUD App
+# Contact Manager – Simple Full-Stack CRUD App
 
 Simple and clean Contact Manager built with:
 
@@ -26,7 +26,7 @@ python main.py
 ```
 
 You should see:
-text\* Running on http://127.0.0.1:5000
+>>> Running on http://127.0.0.1:5000
 Keep this terminal running.
 
 #### 2. Start the Frontend (React)
