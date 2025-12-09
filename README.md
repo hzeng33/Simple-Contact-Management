@@ -43,3 +43,6 @@ npm install
 # Start the development server
 npm run dev
 ```
+
+<img src="full.png" width="600" alt="Contact Management"/>
+<img src="Screenshot 2025-12-08 215505.png" width="600" alt="Create Contact Modal"/>
