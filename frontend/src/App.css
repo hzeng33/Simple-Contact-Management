@@ -1,0 +1,181 @@
+html,
+body {
+  height: 100%;
+  margin: 0;
+}
+
+body {
+  background-color: lightskyblue;
+  font-family: Arial, Helvetica, sans-serif;
+  display: flex;
+  align-items: flex-start; /* ← changed from "center" */
+  justify-content: center;
+  min-height: 100vh;
+  padding: 40px 20px;
+}
+
+.contact-list {
+  width: 100%;
+  max-width: 1000px;
+  background: white;
+  border-radius: 6.6px;
+  padding: 20px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.12);
+  text-align: center;
+}
+
+.contact-list h2 {
+  color: #1e40af;
+  margin-bottom: 30px;
+  font-size: 2.4rem;
+}
+
+/* Table styling */
+.contact-list table {
+  width: 100%;
+  border-collapse: separate;
+  border-spacing: 0 10px;
+  margin-top: 10px;
+}
+
+.contact-list th {
+  background: #3b82f6;
+  color: white;
+  padding: 16px;
+  text-align: center;
+}
+
+.contact-list td {
+  padding: 16px;
+  background: #f8faff;
+  border: none;
+}
+
+.contact-list tr:hover td {
+  background: #dbeafe;
+}
+
+/* Buttons */
+.contact-list button,
+.createbtn {
+  margin: 10px 4px;
+  padding: 6px 14px;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: 500;
+}
+
+.modal {
+  position: fixed;
+  z-index: 1;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+
+.modal-content {
+  background-color: #fefefe;
+  margin: 10% auto;
+  padding: 20px;
+  border: 1px solid #888;
+  width: 80%;
+}
+
+.close {
+  color: black;
+  float: right;
+  font-size: 32px;
+  font-weight: bold;
+}
+
+.contact-form div {
+  margin-bottom: 10px;
+}
+
+.contact-form input {
+  width: 50%;
+  padding: 14px 16px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  font-size: 1rem;
+  background-color: #fcfcfd;
+  transition: border 0.2s;
+}
+
+.contact-form input:focus {
+  outline: none;
+  border-color: #3b82f6;
+  background-color: white;
+}
+
+.contact-form button {
+  padding: 14px;
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  font-size: 1.05rem;
+  font-weight: 500;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.contact-form button:hover {
+  background-color: #1d4ed8;
+}
+
+* Responsive – stack on mobile */ @media (max-width: 768px) {
+  .contact-list {
+    padding: 0 10px;
+    margin: 20px auto;
+  }
+
+  .contact-list table,
+  .contact-list thead,
+  .contact-list tbody,
+  .contact-list th,
+  .contact td,
+  .contact tr {
+    display: block;
+  }
+
+  .contact-list thead tr {
+    position: absolute;
+    top: -9999px;
+    left: -9999px;
+  }
+
+  .contact-list tr {
+    margin-bottom: 20px;
+    border: 1px solid #cbd5e1;
+    border-radius: 10px;
+    padding: 15px;
+    background: white;
+  }
+
+  .contact-list td {
+    border: none;
+    position: relative;
+    padding-left: 50%;
+    text-align: right;
+  }
+
+  .contact-list td::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 15px;
+    width: 45%;
+    font-weight: bold;
+    text-align: left;
+    color: #3b82f6;
+  }
+
+  .contact-list button {
+    width: 100%;
+    margin: 5px 0;
+  }
+}
